@@ -3,74 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Methi Mix Powder</title>
+<title>Methi Mix Powder - Herbal Digestive Support</title>
 
-<!-- Facebook Pixel Code START -->
+<!-- Facebook Pixel Code -->
 <!-- YOUR_PIXEL_ID বসাও -->
-<script>
-/* Facebook Pixel Code Here */
-</script>
-<!-- Facebook Pixel Code END -->
 
 <style>
-body{margin:0;font-family:Arial;background:#f4fff6}
-.container{width:95%;max-width:1100px;margin:auto}
-.hero{
-background:linear-gradient(135deg,#0f9d58,#34a853);
-color:white;padding:40px 20px;text-align:center}
-.hero h1{font-size:28px;margin-bottom:10px}
-.price{font-size:30px;font-weight:bold;color:#fff}
-.btn{
-background:#ff9800;color:#fff;padding:15px 25px;
-display:inline-block;margin-top:15px;
-border-radius:50px;text-decoration:none;font-weight:bold;font-size:18px}
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#e8fff1,#ffffff,#e6fff8);
+}
 
-.marquee{
-margin-top:15px;
-background:white;
-color:#0f9d58;
-padding:10px;
+/* HERO SECTION */
+.hero{
+background:linear-gradient(135deg,#0f9d58,#1dbf73);
+color:white;
+text-align:center;
+padding:50px 20px;
+}
+.hero h1{font-size:30px;margin-bottom:10px}
+.price{font-size:32px;font-weight:bold;margin:15px 0}
+.order-btn{
+background:#ff9800;
+color:white;
+padding:16px 30px;
+font-size:20px;
 border-radius:50px;
+text-decoration:none;
+display:inline-block;
+font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* FULL WIDTH MARQUEE */
+.marquee-box{
+width:100%;
+background:#ffeb3b;
+padding:18px 0;
 overflow:hidden;
 white-space:nowrap;
+font-size:20px;
 font-weight:bold;
+color:#000;
 }
-.marquee span{
+.marquee-text{
 display:inline-block;
 padding-left:100%;
-animation:marquee 25s linear infinite;
+animation:scrollText 28s linear infinite;
 }
-@keyframes marquee{
+@keyframes scrollText{
 0%{transform:translateX(0);}
 100%{transform:translateX(-100%);}
 }
 
-.section{padding:40px 0;text-align:center}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+/* SECTION */
+.section{padding:50px 20px;text-align:center}
+.section h2{font-size:26px;margin-bottom:20px;color:#0f9d58}
+
+/* FEATURES */
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
 .card{
-background:white;padding:20px;border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+font-size:16px;
+}
+
+/* IMAGE FRAMES */
 .image-frame{
-border:5px solid #34a853;
+border:6px solid #1dbf73;
 border-radius:25px;
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.2)}
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+transition:0.3s;
+background:white;
+}
+.image-frame:hover{transform:scale(1.05)}
 .image-frame img{width:100%;display:block}
 
-.review-slider{position:relative;overflow:hidden;height:220px}
-.review{position:absolute;width:100%;opacity:0;transition:1s}
+/* REVIEW SLIDER */
+.review-slider{
+position:relative;
+height:250px;
+max-width:600px;
+margin:auto;
+}
+.review{
+position:absolute;
+width:100%;
+opacity:0;
+transition:1s;
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
 .review.active{opacity:1}
+.review img{
+width:80px;
+height:80px;
+border-radius:50%;
+margin-bottom:10px;
+}
 
+/* FORM */
 .form-section{
-background:#ffffff;padding:30px;border-radius:25px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15)}
+max-width:600px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
 input,textarea{
-width:100%;padding:15px;margin:10px 0;
-border-radius:15px;border:1px solid #ccc;font-size:16px}
+width:100%;
+padding:15px;
+margin:10px 0;
+border-radius:15px;
+border:1px solid #ccc;
+font-size:16px;
+}
 .submit-btn{
-background:#0f9d58;color:#fff;padding:15px;
-border:none;border-radius:50px;font-size:18px;width:100%}
+background:#0f9d58;
+color:white;
+padding:15px;
+border:none;
+border-radius:50px;
+font-size:18px;
+width:100%;
+}
 
+/* SUCCESS MESSAGE */
 .success-message{
 position:fixed;
 top:50%;
@@ -78,41 +149,93 @@ left:50%;
 transform:translate(-50%,-50%);
 background:#0f9d58;
 color:white;
-padding:30px;
+padding:35px;
 border-radius:20px;
-font-size:18px;
+font-size:20px;
 text-align:center;
 display:none;
 z-index:9999;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
 }
 
 .footer{
-background:#0f9d58;color:white;text-align:center;padding:15px}
+background:#0f9d58;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
 </style>
 </head>
 
 <body>
 
 <div class="hero">
-<div class="container">
 <h1>১৫টি প্রিমিয়াম ভেষজে তৈরি ১০০% ন্যাচারাল ফর্মুলা</h1>
-<p>গ্যাস, অ্যাসিডিটি ও বদহজমে দ্রুত আরাম পেতে আজই অর্ডার করুন</p>
+<p>গ্যাস্ট্রিক, অ্যাসিডিটি ও বদহজমে কার্যকর হার্বাল সাপোর্ট</p>
 <div class="price">মাত্র ৳৪৯৯</div>
-
-<a href="#order" class="btn">এখানে অর্ডার করুন 👈</a>
-
-<div class="marquee">
-<span>
-🌙 সবাইকে আসসালামুয়ালাইকুম 🌙 সবাইকে মাহে রমজানের শুভেচ্ছা 🌙 আমাদের অনেকের অতিরিক্ত গ্যাস্ট্রিক, কোষ্ঠকাঠিন্য, বুকের ভিতর জ্বালাপোড়া সমস্যা আছে 🤕 এই পবিত্র রমজান মাসে সমস্যা আরও বেড়ে যায় 😔 আমাদের পণ্যটি শতভাগ হালাল ✅ আপনি সেবনের দিন থেকেই কার্যকারিতা বুঝতে পারবেন ইনশাআল্লাহ 🤲 একটি ফাইল সেবনেই গ্যাস্ট্রিক, কোষ্ঠকাঠিন্য ও জ্বালাপোড়া থেকে আরাম পাবেন আল্লাহ ভরসা 🌿
-</span>
+<a href="#order" class="order-btn">এখানে অর্ডার করুন 👈</a>
 </div>
 
+<!-- YELLOW RUNNING HEADLINE -->
+<div class="marquee-box">
+<div class="marquee-text">
+🌙 সবাইকে আসসালামুয়ালাইকুম 🌙 সবাইকে মাহে রমজানের শুভেচ্ছা 🌙 অতিরিক্ত গ্যাস্ট্রিক, কোষ্ঠকাঠিন্য ও বুক জ্বালাপোড়া সমস্যা রমজানে বেড়ে যায় 🤕 আমাদের পণ্যটি শতভাগ হালাল ✅ সেবনের দিন থেকেই কার্যকারিতা বুঝতে পারবেন ইনশাআল্লাহ 🤲 আল্লাহ ভরসা 🌿
 </div>
 </div>
 
-<div class="section container" id="order">
-<h2>📝 অর্ডার করতে নিচের ফর্ম পূরণ করুন</h2>
+<!-- BENEFITS -->
+<div class="section">
+<h2>🌿 পণ্যের মূল উপকারিতা</h2>
+<div class="features">
+<div class="card">গ্যাস, অ্যাসিডিটি ও বুক জ্বালা কমাতে সহায়ক</div>
+<div class="card">বদহজম, পেট ফাঁপা ও কোষ্ঠকাঠিন্যে কার্যকর</div>
+<div class="card">হজমশক্তি বৃদ্ধি করে</div>
+<div class="card">প্রাকৃতিক ডিটক্স সাপোর্ট</div>
+</div>
+</div>
+
+<!-- PRODUCT IMAGES -->
+<div class="section">
+<h2>📸 পণ্যের ছবি</h2>
+<div class="features">
+<div class="image-frame"><img src="IMAGE_LINK_1"></div>
+<div class="image-frame"><img src="IMAGE_LINK_2"></div>
+<div class="image-frame"><img src="IMAGE_LINK_3"></div>
+<div class="image-frame"><img src="IMAGE_LINK_4"></div>
+</div>
+</div>
+
+<!-- REVIEWS -->
+<div class="section">
+<h2>⭐ কাস্টমার রিভিউ</h2>
+<div class="review-slider">
+<div class="review active">
+<img src="REVIEW_IMAGE_1">
+<p>৩ দিনেই গ্যাস সমস্যা অনেক কমেছে।</p>
+</div>
+<div class="review">
+<img src="REVIEW_IMAGE_2">
+<p>খুব ভালো কাজ করছে, পেট হালকা লাগে।</p>
+</div>
+<div class="review">
+<img src="REVIEW_IMAGE_3">
+<p>নেচারাল ও ভালো প্রোডাক্ট।</p>
+</div>
+<div class="review">
+<img src="REVIEW_IMAGE_4">
+<p>বদহজমে দারুণ উপকার পেয়েছি।</p>
+</div>
+<div class="review">
+<img src="REVIEW_IMAGE_5">
+<p>দাম অনুযায়ী অসাধারণ।</p>
+</div>
+</div>
+</div>
+
+<!-- ORDER FORM -->
+<div class="section" id="order">
+<h2>📝 অর্ডার করতে ফর্ম পূরণ করুন</h2>
 <div class="form-section">
 <form id="orderForm" action="YOUR_GOOGLE_SHEET_LINK" method="POST">
 <input type="text" name="name" placeholder="আপনার নাম লিখুন" required>
@@ -125,7 +248,7 @@ background:#0f9d58;color:white;text-align:center;padding:15px}
 
 <div class="success-message" id="successMessage">
 🟩 আপনার অর্ডারটি সফলতার সাথে সাবমিট হয়ে গেছে 🟩 <br><br>
-আমাদের প্রতিনিধি টিম আপনার সাথে খুব শীঘ্রই যোগাযোগ করবে 🟩 <br><br>
+আমাদের প্রতিনিধি টিম খুব শীঘ্রই যোগাযোগ করবে 🟩 <br><br>
 আপনাকে ধন্যবাদ
 </div>
 
@@ -134,13 +257,20 @@ background:#0f9d58;color:white;text-align:center;padding:15px}
 </div>
 
 <script>
+/* Review Auto Slide */
+let reviews=document.querySelectorAll('.review');
+let index=0;
+setInterval(()=>{
+reviews[index].classList.remove('active');
+index=(index+1)%reviews.length;
+reviews[index].classList.add('active');
+},1000);
+
+/* Form Submit */
 document.getElementById("orderForm").addEventListener("submit", function(e){
 e.preventDefault();
-
-fetch(this.action,{
-method:"POST",
-body:new FormData(this)
-}).then(()=>{
+fetch(this.action,{method:"POST",body:new FormData(this)})
+.then(()=>{
 document.getElementById("successMessage").style.display="block";
 setTimeout(()=>{
 document.getElementById("successMessage").style.display="none";

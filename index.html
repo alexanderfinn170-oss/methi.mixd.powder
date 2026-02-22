@@ -5,6 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Methi Mix Powder</title>
 
+<!-- FACEBOOK PIXEL PLACEHOLDER -->
+<!-- এখানে তুমি নিজের পিক্সেল আইডি বসাবে -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID_HERE'); // এখানে পিক্সেল আইডি বসাও
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/>
+</noscript>
+
 <style>
 body{
 margin:0;
@@ -12,14 +31,40 @@ font-family:'Segoe UI',sans-serif;
 background:linear-gradient(135deg,#e8fff1,#ffffff,#e6fff8);
 }
 
-/* HERO */
+/* HERO SECTION WITH SLIDER BACKGROUND */
 .hero{
-background:linear-gradient(135deg,#0f9d58,#1dbf73);
+position:relative;
 color:white;
 text-align:center;
 padding:50px 20px;
+overflow:hidden;
+}
+
+/* IMAGE SLIDER BACKGROUND */
+.hero-slider{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+}
+.hero-slider img{
+width:100%;
+height:100%;
+object-fit:cover;
+position:absolute;
+opacity:0;
+transition:opacity 0.8s ease-in-out;
+}
+
+/* TEXT CONTENT ABOVE SLIDER */
+.hero-content{
+position:relative;
+z-index:2;
 }
 .hero h1{font-size:30px;margin-bottom:10px}
+.hero p{margin-bottom:10px;font-size:18px}
 .price{font-size:32px;font-weight:bold;margin:15px 0}
 .order-btn{
 background:#ff9800;
@@ -39,7 +84,7 @@ animation:pulse 1.5s infinite;
 100%{transform:scale(1);}
 }
 
-/* RUNNING HEADLINE */
+/* MARQUEE */
 .marquee-box{
 width:100%;
 background:#ffeb3b;
@@ -193,14 +238,26 @@ font-weight:bold;
 
 <body>
 
+<!-- HERO SECTION -->
 <div class="hero">
-<h1>১৫টি প্রিমিয়াম ভেষজে তৈরি ১০০% ন্যাচারাল ফর্মুলা</h1>
-<p>গ্যাস্ট্রিক, অ্যাসিডিটি ও বদহজমে কার্যকর হার্বাল সাপোর্ট</p>
-<div class="price">মাত্র ৳৪৯৯</div>
-<a href="#order" class="order-btn">এখানে অর্ডার করুন 👈</a>
+  <!-- IMAGE SLIDER BACKGROUND -->
+  <div class="hero-slider">
+    <img src="HEADER_IMAGE_1" class="active">
+    <img src="HEADER_IMAGE_2">
+    <img src="HEADER_IMAGE_3">
+    <img src="HEADER_IMAGE_4">
+  </div>
+
+  <!-- TEXT CONTENT -->
+  <div class="hero-content">
+    <h1>১৫টি প্রিমিয়াম ভেষজে তৈরি ১০০% ন্যাচারাল ফর্মুলা</h1>
+    <p>গ্যাস্ট্রিক, অ্যাসিডিটি ও বদহজমে কার্যকর হার্বাল সাপোর্ট</p>
+    <div class="price">মাত্র ৳৪৯৯</div>
+    <a href="#order" class="order-btn">এখানে অর্ডার করুন 👈</a>
+  </div>
 </div>
 
-<!-- RUNNING HEADLINE -->
+<!-- MARQUEE -->
 <div class="marquee-box">
 <div class="marquee-text">
 🌙 সবাইকে আসসালামুয়ালাইকুম 🌙 সবাইকে মাহে রমজানের শুভেচ্ছা 🌙 
@@ -212,33 +269,30 @@ font-weight:bold;
 </div>
 </div>
 
+<!-- BENEFIT SECTION -->
 <div class="benefit-title">পণ্যের মূল উপকারিতা</div>
-
 <div class="benefits">
-
 <div class="benefit-box" style="background:#ff6f61;">
 <img src="BENEFIT_IMAGE_1">
 <h3>গ্যাস ও অ্যাসিডিটি কমাতে সহায়ক</h3>
 <p>অতিরিক্ত গ্যাস, বুক জ্বালা ও টক ঢেকুর থেকে দ্রুত আরাম দিতে সহায়তা করে।</p>
 <a href="#order" class="benefit-btn">অর্ডার করতে চাই 👈</a>
 </div>
-
 <div class="benefit-box" style="background:#6a5acd;">
 <img src="BENEFIT_IMAGE_2">
 <h3>বদহজম ও পেট ফাঁপায় কার্যকর</h3>
 <p>পেট ভার ও অরুচি কমাতে প্রাকৃতিকভাবে সহায়তা করে।</p>
 <a href="#order" class="benefit-btn">অর্ডার করতে চাই 👈</a>
 </div>
-
 <div class="benefit-box" style="background:#20b2aa;">
 <img src="BENEFIT_IMAGE_3">
 <h3>হজমশক্তি উন্নত করে</h3>
 <p>নিয়মিত সেবনে হজম প্রক্রিয়া স্বাভাবিক রাখতে সাহায্য করে।</p>
 <a href="#order" class="benefit-btn">অর্ডার করতে চাই 👈</a>
 </div>
-
 </div>
 
+<!-- REVIEW -->
 <div class="review-section">
 <h2>আমাদের কাস্টমারের রিভিউ</h2>
 <div class="review-slider">
@@ -250,6 +304,7 @@ font-weight:bold;
 </div>
 </div>
 
+<!-- ORDER FORM -->
 <div id="order" class="form-section">
 <h2>অর্ডার করতে ফর্ম পূরণ করুন</h2>
 <form id="orderForm" action="YOUR_GOOGLE_SHEET_LINK" method="POST">
@@ -272,6 +327,16 @@ font-weight:bold;
 </div>
 
 <script>
+// HERO IMAGE SLIDER
+let slides=document.querySelectorAll('.hero-slider img');
+let current=0;
+setInterval(()=>{
+slides.forEach(s=>s.style.opacity=0);
+current=(current+1)%slides.length;
+slides[current].style.opacity=1;
+},1000); // 1 second per slide
+
+// REVIEW SLIDER
 let reviews=document.querySelectorAll('.review');
 let index=0;
 setInterval(()=>{
@@ -280,6 +345,7 @@ index=(index+1)%reviews.length;
 reviews[index].classList.add('active');
 },2000);
 
+// FORM SUBMIT
 document.getElementById("orderForm").addEventListener("submit", function(e){
 e.preventDefault();
 fetch(this.action,{method:"POST",body:new FormData(this)})

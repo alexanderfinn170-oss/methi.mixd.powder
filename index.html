@@ -59,28 +59,25 @@ opacity:0;
 transition:opacity 0.8s ease-in-out;
 }
 
-/* NEW BOX UNDER HEADER */
-.hero-box{
+/* RED BOX UNDER HERO IMAGE */
+.hero-red-box{
 position:relative;
-z-index:2;
 background:red;
 color:white;
-padding:25px 20px;
 text-align:center;
-margin-top:420px; /* ঠিক করে নিচে বসাবে */
-border-radius:15px;
-max-width:90%;
-margin-left:auto;
-margin-right:auto;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
+padding:25px 20px;
+margin-top:0;
+border-radius:0; /* কোন কোনা গোল নেই */
+width:100%;
+box-sizing:border-box;
 }
-.hero-box h1{
+.hero-red-box h1{
 font-size:28px;
 margin-bottom:12px;
 font-weight:bold;
 line-height:1.3;
 }
-.hero-box .price{
+.hero-red-box .price{
 font-size:32px;
 font-weight:bold;
 color:orange;
@@ -88,7 +85,7 @@ text-shadow: 0 0 12px #ff4500, 0 0 25px #ff6347;
 margin:15px 0;
 display:inline-block;
 }
-.hero-box .order-btn{
+.hero-red-box .order-btn{
 background:#ff9800;
 color:white;
 padding:16px 30px;
@@ -285,17 +282,17 @@ font-weight:bold;
   <div class="hero-slider">
     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnDvIC9kt5hn2ndzKN6BCsuo9FfFjqi_oQK1N7yAnlNyXtKsQQeP1d8P6f_ifJbETSOoztatgJjYadd5b3Bsq-5ZfP0S3nh0oE5Sls3cfD1WhgScJOwkC0jqqEiVwjwO09ifPkSSpVm4UyL26MmeOn9XDRkiFjkYzFDAgfoR87z6cjoEdB1BNZOKyY0Fg/s1600/WhatsApp%20Image%202026-02-22%20at%2010.10.24.jpeg" class="active">
     <img src="HEADER_IMAGE_2">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnDvIC9kt5hn2ndzKN6BCsuo9FfFjqi_oQK1N7yAnlNyXtKsQQeP1d8P6f_ifJbETSOoztatgJjYadd5b3Bsq-5ZfP0S3nh0oE5Sls3cfD1WhgScJOwkC0jqqEiVwjwO09ifPkSSpVm4UyL26MmeOn9XDRkiFjkYzFDAgfoR87z6cjoEdB1BNZOKyY0Fg/s1600/WhatsApp%20Image%202026-02-22%20at%2010.10.24.jpeg">
+    <img src="HEADER_IMAGE_3">
     <img src="HEADER_IMAGE_4">
   </div>
+</div>
 
-  <!-- HERO BOX BELOW IMAGE -->
-  <div class="hero-box">
-    <h1>১৫টি প্রিমিয়াম ভেষজে তৈরি ১০০% ন্যাচারাল ফর্মুলা<br>
-    গ্যাস্ট্রিক, অ্যাসিডিটি ও বদহজমে কার্যকর হার্বাল সাপোর্ট</h1>
-    <div class="price">মাত্র ৳৪৯৯</div><br>
-    <a href="#order" class="order-btn">এখানে অর্ডার করুন 👈</a>
-  </div>
+<!-- RED BOX BELOW HERO IMAGE -->
+<div class="hero-red-box">
+<h1>১৫টি প্রিমিয়াম ভেষজে তৈরি ১০০% ন্যাচারাল ফর্মুলা<br>
+গ্যাস্ট্রিক, অ্যাসিডিটি ও বদহজমে কার্যকর হার্বাল সাপোর্ট</h1>
+<div class="price">মাত্র ৳৪৯৯</div><br>
+<a href="#order" class="order-btn">এখানে অর্ডার করুন 👈</a>
 </div>
 
 <!-- MARQUEE -->

@@ -3,10 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Methi Mix Powder - Herbal Digestive Support</title>
-
-<!-- Facebook Pixel Code -->
-<!-- YOUR_PIXEL_ID বসাও -->
+<title>Methi Mix Powder</title>
 
 <style>
 body{
@@ -15,7 +12,7 @@ font-family:'Segoe UI',sans-serif;
 background:linear-gradient(135deg,#e8fff1,#ffffff,#e6fff8);
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
 background:linear-gradient(135deg,#0f9d58,#1dbf73);
 color:white;
@@ -34,66 +31,92 @@ text-decoration:none;
 display:inline-block;
 font-weight:bold;
 box-shadow:0 8px 20px rgba(0,0,0,0.3);
+animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
 }
 
-/* FULL WIDTH MARQUEE */
+/* RUNNING HEADLINE */
 .marquee-box{
 width:100%;
 background:#ffeb3b;
-padding:18px 0;
+padding:25px 0;
 overflow:hidden;
 white-space:nowrap;
-font-size:20px;
+font-size:24px;
 font-weight:bold;
 color:#000;
 }
 .marquee-text{
 display:inline-block;
 padding-left:100%;
-animation:scrollText 28s linear infinite;
+animation:scrollText 30s linear infinite;
 }
 @keyframes scrollText{
 0%{transform:translateX(0);}
 100%{transform:translateX(-100%);}
 }
 
-/* SECTION */
-.section{padding:50px 20px;text-align:center}
-.section h2{font-size:26px;margin-bottom:20px;color:#0f9d58}
-
-/* FEATURES */
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-max-width:1100px;
-margin:auto;
+/* BENEFIT TITLE */
+.benefit-title{
+width:100%;
+background:red;
+color:white;
+text-align:center;
+padding:22px 0;
+font-size:28px;
+font-weight:bold;
 }
-.card{
-background:white;
-padding:25px;
+
+/* BENEFIT BOX */
+.benefits{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:40px 20px;
+}
+.benefit-box{
+width:320px;
+padding:20px;
 border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-font-size:16px;
+color:white;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
 }
-
-/* IMAGE FRAMES */
-.image-frame{
-border:6px solid #1dbf73;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 15px 35px rgba(0,0,0,0.25);
-transition:0.3s;
+.benefit-box img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+.benefit-btn{
+margin-top:15px;
+display:inline-block;
 background:white;
+color:black;
+padding:12px 25px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+animation:pulse 1.5s infinite;
 }
-.image-frame:hover{transform:scale(1.05)}
-.image-frame img{width:100%;display:block}
 
-/* REVIEW SLIDER */
+/* REVIEW */
+.review-section{
+padding:40px 20px;
+text-align:center;
+}
+.review-section h2{
+font-size:26px;
+margin-bottom:20px;
+}
 .review-slider{
 position:relative;
-height:250px;
-max-width:600px;
+height:280px;
+max-width:500px;
 margin:auto;
 }
 .review{
@@ -101,23 +124,18 @@ position:absolute;
 width:100%;
 opacity:0;
 transition:1s;
-background:white;
-padding:20px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 .review.active{opacity:1}
 .review img{
-width:80px;
-height:80px;
-border-radius:50%;
-margin-bottom:10px;
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* FORM */
 .form-section{
 max-width:600px;
-margin:auto;
+margin:40px auto;
 background:white;
 padding:30px;
 border-radius:25px;
@@ -158,12 +176,17 @@ z-index:9999;
 box-shadow:0 15px 35px rgba(0,0,0,0.4);
 }
 
+/* FOOTER */
 .footer{
-background:#0f9d58;
-color:white;
+background:#111;
+color:#ddd;
+padding:30px 20px;
 text-align:center;
-padding:20px;
-margin-top:40px;
+}
+.footer a{
+color:#00c853;
+text-decoration:none;
+font-weight:bold;
 }
 </style>
 </head>
@@ -177,73 +200,64 @@ margin-top:40px;
 <a href="#order" class="order-btn">এখানে অর্ডার করুন 👈</a>
 </div>
 
-<!-- YELLOW RUNNING HEADLINE -->
+<!-- RUNNING HEADLINE -->
 <div class="marquee-box">
 <div class="marquee-text">
-🌙 সবাইকে আসসালামুয়ালাইকুম 🌙 সবাইকে মাহে রমজানের শুভেচ্ছা 🌙 অতিরিক্ত গ্যাস্ট্রিক, কোষ্ঠকাঠিন্য ও বুক জ্বালাপোড়া সমস্যা রমজানে বেড়ে যায় 🤕 আমাদের পণ্যটি শতভাগ হালাল ✅ সেবনের দিন থেকেই কার্যকারিতা বুঝতে পারবেন ইনশাআল্লাহ 🤲 আল্লাহ ভরসা 🌿
+🌙 সবাইকে আসসালামুয়ালাইকুম 🌙 সবাইকে মাহে রমজানের শুভেচ্ছা 🌙 
+আমাদের অনেকের অতিরিক্ত গ্যাস্ট্রিক, কোষ্ঠকাঠিন্য ও বুকের ভিতর জ্বালাপোড়া সমস্যা আছে 🤕 
+রমজান মাসে এই সমস্যা বেড়ে যায় 😔 
+আমাদের পণ্যটি শতভাগ হালাল ✅ 
+সেবনের দিন থেকেই কার্যকারিতা বুঝতে পারবেন ইনশাআল্লাহ 🤲 
+আল্লাহ ভরসা 🌿
 </div>
 </div>
 
-<!-- BENEFITS -->
-<div class="section">
-<h2>🌿 পণ্যের মূল উপকারিতা</h2>
-<div class="features">
-<div class="card">গ্যাস, অ্যাসিডিটি ও বুক জ্বালা কমাতে সহায়ক</div>
-<div class="card">বদহজম, পেট ফাঁপা ও কোষ্ঠকাঠিন্যে কার্যকর</div>
-<div class="card">হজমশক্তি বৃদ্ধি করে</div>
-<div class="card">প্রাকৃতিক ডিটক্স সাপোর্ট</div>
-</div>
+<div class="benefit-title">পণ্যের মূল উপকারিতা</div>
+
+<div class="benefits">
+
+<div class="benefit-box" style="background:#ff6f61;">
+<img src="BENEFIT_IMAGE_1">
+<h3>গ্যাস ও অ্যাসিডিটি কমাতে সহায়ক</h3>
+<p>অতিরিক্ত গ্যাস, বুক জ্বালা ও টক ঢেকুর থেকে দ্রুত আরাম দিতে সহায়তা করে।</p>
+<a href="#order" class="benefit-btn">অর্ডার করতে চাই 👈</a>
 </div>
 
-<!-- PRODUCT IMAGES -->
-<div class="section">
-<h2>📸 পণ্যের ছবি</h2>
-<div class="features">
-<div class="image-frame"><img src="IMAGE_LINK_1"></div>
-<div class="image-frame"><img src="IMAGE_LINK_2"></div>
-<div class="image-frame"><img src="IMAGE_LINK_3"></div>
-<div class="image-frame"><img src="IMAGE_LINK_4"></div>
-</div>
+<div class="benefit-box" style="background:#6a5acd;">
+<img src="BENEFIT_IMAGE_2">
+<h3>বদহজম ও পেট ফাঁপায় কার্যকর</h3>
+<p>পেট ভার ও অরুচি কমাতে প্রাকৃতিকভাবে সহায়তা করে।</p>
+<a href="#order" class="benefit-btn">অর্ডার করতে চাই 👈</a>
 </div>
 
-<!-- REVIEWS -->
-<div class="section">
-<h2>⭐ কাস্টমার রিভিউ</h2>
+<div class="benefit-box" style="background:#20b2aa;">
+<img src="BENEFIT_IMAGE_3">
+<h3>হজমশক্তি উন্নত করে</h3>
+<p>নিয়মিত সেবনে হজম প্রক্রিয়া স্বাভাবিক রাখতে সাহায্য করে।</p>
+<a href="#order" class="benefit-btn">অর্ডার করতে চাই 👈</a>
+</div>
+
+</div>
+
+<div class="review-section">
+<h2>আমাদের কাস্টমারের রিভিউ</h2>
 <div class="review-slider">
-<div class="review active">
-<img src="REVIEW_IMAGE_1">
-<p>৩ দিনেই গ্যাস সমস্যা অনেক কমেছে।</p>
-</div>
-<div class="review">
-<img src="REVIEW_IMAGE_2">
-<p>খুব ভালো কাজ করছে, পেট হালকা লাগে।</p>
-</div>
-<div class="review">
-<img src="REVIEW_IMAGE_3">
-<p>নেচারাল ও ভালো প্রোডাক্ট।</p>
-</div>
-<div class="review">
-<img src="REVIEW_IMAGE_4">
-<p>বদহজমে দারুণ উপকার পেয়েছি।</p>
-</div>
-<div class="review">
-<img src="REVIEW_IMAGE_5">
-<p>দাম অনুযায়ী অসাধারণ।</p>
-</div>
+<div class="review active"><img src="REVIEW_IMAGE_1"></div>
+<div class="review"><img src="REVIEW_IMAGE_2"></div>
+<div class="review"><img src="REVIEW_IMAGE_3"></div>
+<div class="review"><img src="REVIEW_IMAGE_4"></div>
+<div class="review"><img src="REVIEW_IMAGE_5"></div>
 </div>
 </div>
 
-<!-- ORDER FORM -->
-<div class="section" id="order">
-<h2>📝 অর্ডার করতে ফর্ম পূরণ করুন</h2>
-<div class="form-section">
+<div id="order" class="form-section">
+<h2>অর্ডার করতে ফর্ম পূরণ করুন</h2>
 <form id="orderForm" action="YOUR_GOOGLE_SHEET_LINK" method="POST">
 <input type="text" name="name" placeholder="আপনার নাম লিখুন" required>
 <input type="text" name="phone" placeholder="মোবাইল নাম্বার লিখুন" required>
 <textarea name="address" placeholder="সম্পূর্ণ ঠিকানা লিখুন" required></textarea>
 <button type="submit" class="submit-btn">কনফার্ম অর্ডার</button>
 </form>
-</div>
 </div>
 
 <div class="success-message" id="successMessage">
@@ -253,20 +267,19 @@ margin-top:40px;
 </div>
 
 <div class="footer">
-© 2026 Methi Mix Powder | All Rights Reserved
+<p>© 2026 All Rights Reserved</p>
+<p>Design By <a href="GREENLINE_LINK_HERE">GreenLine It</a></p>
 </div>
 
 <script>
-/* Review Auto Slide */
 let reviews=document.querySelectorAll('.review');
 let index=0;
 setInterval(()=>{
 reviews[index].classList.remove('active');
 index=(index+1)%reviews.length;
 reviews[index].classList.add('active');
-},1000);
+},2000);
 
-/* Form Submit */
 document.getElementById("orderForm").addEventListener("submit", function(e){
 e.preventDefault();
 fetch(this.action,{method:"POST",body:new FormData(this)})

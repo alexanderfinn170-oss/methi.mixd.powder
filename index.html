@@ -357,78 +357,84 @@ font-weight:bold;
   </form>
 </div>
 
-<!-- SUCCESS OVERLAY -->
-<div id="successOverlay">
-    <div class="content">
-        <div style="font-size:50px; font-weight:bold; color:green;">✅</div>
-        <h2>আপনার অর্ডারটি সফলভাবে সাবমিট হয়েছে!!!</h2>
-        <p>আমাদের প্রতিনিধি আপনার সাথে যোগাযোগ করবে ইনশাল্লাহ</p>
-        <div class="user-data">
-            <p>✅আপনার দেওয়া তথ্য ✅</p>
-            <p>🟩 আপনার নাম: <span id="userName"></span></p>
-            <p>🟩 আপনার মোবাইল নাম্বার: <span id="userPhone"></span></p>
-            <p>🟩 আপনার ঠিকানা: <span id="userAddress"></span></p>
-        </div>
-        <button id="backBtn">Back</button>
+<!-- SUCCESS OVERLAY TEMPLATE -->
+<div id="successOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+  <div style="background:white; padding:35px 25px; border-radius:25px; max-width:500px; width:90%; text-align:center; box-shadow:0 15px 35px rgba(0,0,0,0.4); font-family:'Segoe UI',sans-serif; position:relative;">
+    <div style="font-size:50px; font-weight:bold; color:green;">✅</div>
+    <h2 style="margin:15px 0; font-size:22px; color:#333;">আপনার অর্ডারটি সফলভাবে সাবমিট হয়েছে!!!</h2>
+    <p style="font-size:16px; color:#555;">আমাদের প্রতিনিধি আপনার সাথে যোগাযোগ করবে ইনশাল্লাহ</p>
+    <div style="margin-top:20px; text-align:left; font-size:16px; color:#333; background:#f3f3f3; padding:15px; border-radius:15px;">
+      <p>✅আপনার দেওয়া তথ্য ✅</p>
+      <p>🟩 আপনার নাম: <span id="userName"></span></p>
+      <p>🟩 আপনার মোবাইল নাম্বার: <span id="userPhone"></span></p>
+      <p>🟩 আপনার ঠিকানা: <span id="userAddress"></span></p>
     </div>
+    <button id="backBtn" style="margin-top:25px; background:#0f9d58; color:white; padding:12px 25px; border:none; border-radius:50px; font-size:16px; cursor:pointer;">Back</button>
+  </div>
 </div>
 
-<script>
-// HERO SLIDER
-document.addEventListener("DOMContentLoaded", function() {
-    const slides = document.querySelectorAll(".hero-slider img");
-    let current = 0;
-    setInterval(() => {
-        slides.forEach((s,i)=>s.classList.remove("active"));
-        slides[current].classList.add("active");
-        current = (current+1)%slides.length;
-    }, 5000);
-});
+<style>
+/* বাটন স্টাইল */
+.submit-btn {
+    background: #0f9d58;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    width: 100%;
+    transition: transform 0.15s ease, background 0.3s ease;
+}
 
-// ORDER FORM + OVERLAY
+/* ক্লিক করলে ছোট হবে */
+.submit-btn:active {
+    transform: scale(0.92);
+}
+
+/* ক্লিক করলে লাল হয়ে যাবে */
+.submit-btn.loading {
+    background: red !important;
+}
+</style>
+
+<script>
+// FORM SUBMIT WITH LIVE TEMPLATE (CLICK → IMMEDIATE RED + SHOW OVERLAY)
 document.getElementById("orderForm").addEventListener("submit", function(e){
     e.preventDefault();
     const form = this;
     const submitBtn = form.querySelector(".submit-btn");
 
-    // বাটন লাল করা সাথে সাথে
+    // বাটন সাথে সাথেই লাল করা
     submitBtn.classList.add("loading");
     submitBtn.disabled = true;
 
     const formData = new FormData(form);
 
-    // Google Sheets POST
+    // Overlay সাথে সাথেই দেখানো
+    const overlay = document.getElementById("successOverlay");
+    overlay.style.display = "flex";
+
+    // ইউজারের তথ্য overlay-এ বসানো
+    document.getElementById("userName").textContent = formData.get("name");
+    document.getElementById("userPhone").textContent = formData.get("phone");
+    document.getElementById("userAddress").textContent = formData.get("address");
+
+    // GOOGLE SHEETS এ তথ্য পাঠানো
     fetch(form.action, { method:"POST", body: formData })
-    .then(() => {
-        // overlay 1 সেকেন্ডের মধ্যে দেখানো
-        setTimeout(() => {
-            const overlay = document.getElementById("successOverlay");
-            overlay.style.display = "flex";
-            document.getElementById("userName").textContent = formData.get("name");
-            document.getElementById("userPhone").textContent = formData.get("phone");
-            document.getElementById("userAddress").textContent = formData.get("address");
-        }, 1000);
-    })
     .catch(() => {
         alert("কিছু সমস্যা হয়েছে, আবার চেষ্টা করুন।");
         submitBtn.classList.remove("loading");
         submitBtn.disabled = false;
+        overlay.style.display = "none";
     });
 });
 
-// BACK BUTTON
+// BACK BUTTON - overlay বন্ধ করে landing page দেখাবে
 document.getElementById("backBtn").addEventListener("click", function(){
-    const overlay = document.getElementById("successOverlay");
-    overlay.style.display = "none";
+    document.getElementById("successOverlay").style.display = "none";
     const submitBtn = document.querySelector(".submit-btn");
     submitBtn.classList.remove("loading");
     submitBtn.disabled = false;
     document.getElementById("orderForm").reset();
 });
 </script>
-
-</body>
-</html>
-
-
-

@@ -215,8 +215,13 @@ border:none;
 border-radius:50px;
 font-size:18px;
 width:100%;
+transition:0.15s ease;   /* নতুন যোগ */
 }
 
+/* শুধু ক্লিক করলে ছোট হবে */
+.submit-btn:active{
+transform:scale(0.92);
+}
 /* BSTI CERTIFICATE SECTION */
 .bsti-section{
 max-width:600px;
@@ -343,7 +348,7 @@ font-weight:bold;
 
 <!-- ORDER FORM -->
 <div id="order" class="form-section">
-<h2>অর্ডার করতে ফর্ম পূরণ করুন</h2>
+<h2>499TK✔অর্ডার করতে ফর্ম পূরণ করুন</h2>
 <form id="orderForm" action="https://script.google.com/macros/s/AKfycbxM5V85KxOBUgIQn1N0Ev9m6ge-4guoWSmruQUqWddeMJgNuLkaxadCvMr4G_ouQKOWjQ/exec" method="POST">
 <input type="text" name="name" placeholder="আপনার নাম লিখুন" required>
 <input type="text" name="phone" placeholder="মোবাইল নাম্বার লিখুন" required>
@@ -409,10 +414,3 @@ document.getElementById("orderForm").reset();
 
 </body>
 </html>
-
-
-
-
-
-
-

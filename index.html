@@ -3,473 +3,537 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Methi Mix Powder</title>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '915423457740717');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1947164179488409&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+<title>Methi Mixd Powder</title>
 
 <style>
 body{
 margin:0;
-font-family:'Segoe UI',sans-serif;
-background:linear-gradient(135deg,#e8fff1,#ffffff,#e6fff8);
-}
-
-/* HERO SECTION */
-.hero{
-position:relative;
+background:#ffffff;
+font-family:Arial, sans-serif;
 text-align:center;
-padding:0;
-overflow:hidden;
-height:500px;
+overflow-x:hidden;
 }
-
-/* IMAGE SLIDER BACKGROUND */
-.hero-slider{
-position:absolute;
-top:0;
-left:0;
+.product-img{width:150px;margin-top:20px;}
+.video-wrapper{
 width:100%;
-height:100%;
-z-index:0;
-}
-.hero-slider img{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-transition:opacity 0.8s ease-in-out;
-}
-
-/* RED BOX BELOW HERO IMAGE */
-.hero-red-box{
+border:2px solid red;
+margin-top:10px;
 position:relative;
-background:red;
-color:white;
-text-align:center;
-padding:25px 20px;
-margin-top:0;
-border-radius:0; /* কোন কোনা গোল নেই */
-width:100%;
-box-sizing:border-box;
-}
-.hero-red-box h1{
-font-size:28px;
-margin-bottom:12px;
-font-weight:bold;
-line-height:1.3;
-}
-.hero-red-box .price{
-font-size:32px;
-font-weight:bold;
-color:orange;
-text-shadow: 0 0 12px #ff4500, 0 0 25px #ff6347;
-margin:15px 0;
-display:inline-block;
-}
-.hero-red-box .order-btn{
-background:#ff9800;
-color:white;
-padding:16px 30px;
-font-size:20px;
-border-radius:50px;
-text-decoration:none;
-display:inline-block;
-font-weight:bold;
-box-shadow:0 8px 20px rgba(0,0,0,0.3);
-animation:pulse 1.5s infinite;
-}
-
-/* MARQUEE */
-.marquee-box{
-width:100%;
-background:#ffeb3b;
-padding:25px 0;
+padding-bottom:56.25%;
+height:0;
 overflow:hidden;
-white-space:nowrap;
-font-size:24px;
-font-weight:bold;
-color:#000;
 }
-.marquee-text{
-display:inline-block;
-padding-left:100%;
-animation:scrollText 30s linear infinite;
+.video-wrapper iframe{
+position:absolute;top:0;left:0;width:100%;height:100%;border:none;
 }
-@keyframes scrollText{
-0%{transform:translateX(0);}
-100%{transform:translateX(-100%);}
-}
-
-/* BENEFIT TITLE */
+.price{font-size:22px;font-weight:bold;margin:10px 0;}
 .benefit-title{
-width:100%;
-background:red;
-color:white;
-text-align:center;
-padding:22px 0;
-font-size:28px;
-font-weight:bold;
+display:inline-block;background:yellow;padding:8px 15px;
+border:1px solid black;font-weight:bold;color:black;
 }
-
-/* BENEFIT BOX */
-.benefits{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-padding:40px 20px;
+.benefits{text-align:left;padding:15px;}
+.benefits li{
+background:white;border:1px solid black;margin:6px 0;padding:6px;color:black;
 }
-.benefit-box{
-width:320px;
-padding:20px;
-border-radius:20px;
-color:white;
-text-align:center;
-box-shadow:0 15px 35px rgba(0,0,0,0.2);
+#scratch-container{
+margin:auto;width:320px;height:160px;border:2px solid red;
+position:relative;overflow:hidden;
 }
-.benefit-box img{
-width:100%;
-border-radius:15px;
-margin-bottom:15px;
+#scratch-bottom{
+width:100%;height:100%;background:yellow;
+display:flex;align-items:center;justify-content:center;
+font-weight:bold;text-align:center;
 }
-.benefit-btn{
-margin-top:15px;
-display:inline-block;
-background:white;
-color:black;
-padding:12px 25px;
-border-radius:50px;
-font-weight:bold;
-text-decoration:none;
-animation:pulse 1.5s infinite;
-}
-
-/* REVIEW */
-.review-section{
-padding:40px 20px;
-text-align:center;
-}
-.review-section h2{
-font-size:26px;
-margin-bottom:20px;
-}
-.review-slider{
-position:relative;
-height:280px;
-max-width:500px;
-margin:auto;
-}
-.review{
-position:absolute;
-width:100%;
-opacity:0;
-transition:1s;
-}
-.review.active{opacity:1}
-.review img{
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* FORM */
-.form-section{
-max-width:600px;
-margin:40px auto;
-background:white;
-padding:30px;
-border-radius:25px;
-box-shadow:0 15px 35px rgba(0,0,0,0.2);
-}
-input,textarea{
-width:100%;
-padding:15px;
-margin:10px 0;
-border-radius:15px;
-border:1px solid #ccc;
-font-size:16px;
+#scratch-canvas{position:absolute;top:0;left:0;touch-action:auto;}
+#result-message{margin-top:15px;font-weight:bold;}
+.order-btn{
+background:red;color:white;padding:10px 20px;border:1px solid black;
+margin-top:15px;cursor:pointer;animation:move 1s infinite alternate;display:none;
 }
 .submit-btn{
-background:#0f9d58;
-color:white;
-padding:15px;
-border:none;
-border-radius:50px;
+background:blue;color:white;padding:10px 20px;border:1px solid black;
+margin-top:10px;cursor:pointer;animation:move 1s infinite alternate;transition:0.3s;
+}
+.submit-btn.shrink{transform:scale(0.8);}
+@keyframes move{from{transform:translateY(0px);}to{transform:translateY(5px);}}
+#billing{display:none;padding:20px;}
+.billing-box{border:2px solid yellow;outline:2px solid black;padding:15px;}
+input{width:90%;padding:8px;margin:5px 0;}
+.qty-btn{
+background:yellow;color:red;border:1px solid green;
+padding:5px 10px;font-size:20px;cursor:pointer;
+}
+#cod-img{cursor:pointer;transition:0.3s;}
+#cod-img.fullscreen{
+position:fixed;top:50%;left:50%;
+transform:translate(-50%,-50%);
+width:90%;z-index:9999;background:#fff;
+}
+#watermark{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) rotate(-20deg);
 font-size:18px;
-width:100%;
-}
-
-/* SUCCESS POPUP TEMPLATE */
-.success-template{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:9999;
-}
-.success-template .popup{
-background:white;
-padding:35px 25px;
-border-radius:25px;
-max-width:500px;
-width:90%;
-text-align:center;
-box-shadow:0 15px 35px rgba(0,0,0,0.4);
-}
-.success-template .popup h1{
-font-size:50px;
-color:green;
-margin-bottom:15px;
-}
-.success-template .popup h2{
-font-size:22px;
-margin-bottom:20px;
-}
-.success-template .popup p{
-font-size:18px;
-margin:5px 0;
-}
-.success-template .popup .back-btn{
-margin-top:20px;
-display:inline-block;
-padding:12px 30px;
-border-radius:50px;
-background:#ff9800;
-color:white;
+color:red;
 font-weight:bold;
-text-decoration:none;
-font-size:18px;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* BSTI CERTIFICATE SECTION */
-.bsti-section{
-max-width:600px;
-margin:30px auto;
+opacity:0.8;
+pointer-events:none;
 text-align:center;
-}
-.bsti-section h3{
-font-size:22px;
-font-weight:bold;
-margin-bottom:15px;
-color:#0f9d58;
-}
-.bsti-section img{
-width:100%;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-.footer{
-background:#111;
-color:#ddd;
-padding:30px 20px;
-text-align:center;
-}
-.footer a{
-color:#00c853;
-text-decoration:none;
-font-weight:bold;
-}
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.05);}
-100%{transform:scale(1);}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
-<div class="hero">
-  <!-- IMAGE SLIDER BACKGROUND -->
-  <div class="hero-slider">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhekjnpZM6lOPerreEG_gbx60HXg4wSpuCseW68hz6N7jdjAgFnBl2N2Uag1N22z0bDla05c9tj0FxaI-9W238EaEBBRimwl-jRDtOIqOPGV40vim1vUV8GP6flwVXBKae6ppMsAOuDRyj4icQbhXKvbbRVKt9-8nsjMprBU97N6AFa3ov1w87eIVn442s/s1599/WhatsApp%20Image%202026-02-22%20at%2013.31.59.jpeg" class="active">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_Bu5E5V5IRgfof-tCfaHxyeeiylQf6r-1E_gm14jOCEbaH_VVSvJR7gO2Puo4-sIqNeyKdyTQVMZjhZDk3UwvlQLbf27-zSPT_zyoGBwZprwcV0q_1Ul3jfkDTAf91cLpFK2N6SpFsw7IUXnaSQKD3SizRcqMzfxKAtk8v6esoph2roJZnom8pMPI4Ls/s1600/WhatsApp%20Image%202026-02-22%20at%2013.23.27.jpeg">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhekjnpZM6lOPerreEG_gbx60HXg4wSpuCseW68hz6N7jdjAgFnBl2N2Uag1N22z0bDla05c9tj0FxaI-9W238EaEBBRimwl-jRDtOIqOPGV40vim1vUV8GP6flwVXBKae6ppMsAOuDRyj4icQbhXKvbbRVKt9-8nsjMprBU97N6AFa3ov1w87eIVn442s/s1599/WhatsApp%20Image%202026-02-22%20at%2013.31.59.jpeg">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYktMuy4jf7km3a_gPN7s2xneljJDL9CRdSGhzLQRzhb2tchW5xyqCIVCeRpx0pF_UJbk8uUEcIElFYnycCejKIQqu8RMX6XM00DbLC3ZnW3j7u9GXlTE6AD6ag1q41eFtvv3MQ5jmszbzb0M0hBOIuj6pfKMME58GpYcOEqHGg_D7jST9FPSo2ORgmX0/s1600/WhatsApp%20Image%202026-02-22%20at%2013.23.49.jpeg">
-  </div>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRwC81uVcpIj5wIHDnNUhNrStcx8LXmaSmN09sM96cNZMBRrnc3ZHXBZf73rUN_MyDLjaQlc1ZMDIIr4-9F5NlWis6hXQoEghwEEDUHZ6NGdYvwBij7Kg4ItCj5qN7IfyD2t06FdqmTT138fuL-RnOSF4TM5dqhoiIGcR7A9zas7DzBUkgF1Wx3llq2tY/s612/WhatsApp_Image_2026-02-26_at_11.22.35-removebg-preview.png" class="product-img">
+
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/pJrfhCo_dgw" allowfullscreen></iframe>
 </div>
 
-<!-- RED BOX BELOW HERO IMAGE -->
-<div class="hero-red-box">
-<h1>১৫টি প্রিমিয়াম ভেষজে তৈরি ১০০% ন্যাচারাল ফর্মুলা<br>
-গ্যাস্ট্রিক কোষ্ঠকাঠিন্যের অ্যাসিডিটি ও বদহজমে কার্যকর হার্বাল সাপোর্ট</h1>
-<div class="price">মাত্র ৳৪৯৯</div><br>
-<a href="#order" class="order-btn">এখানে অর্ডার করুন 👈</a>
+<div class="price">MRP-900tk</div>
+
+<div class="benefit-title">
+Methi Mixd powder সেবনের উপকারিতা 👇
 </div>
 
-<!-- MARQUEE -->
-<div class="marquee-box">
-<div class="marquee-text">
-🌙 সবাইকে আসসালামুয়ালাইকুম 🌙 সবাইকে মাহে রমজানের শুভেচ্ছা 🌙 
-আমাদের অনেকের অতিরিক্ত গ্যাস্ট্রিক, কোষ্ঠকাঠিন্য ও বুকের ভিতর জ্বালাপোড়া সমস্যা আছে 🤕 
-রমজান মাসে এই সমস্যা বেড়ে যায় 😔 
-আমাদের পণ্যটি শতভাগ হালাল ✅ 
-সেবনের দিন থেকেই কার্যকারিতা বুঝতে পারবেন ইনশাআল্লাহ 🤲 
-আল্লাহ ভরসা 🌿
-</div>
+<ul class="benefits">
+<li>৭ দিন সেবনে কোষ্ঠকাঠিন্যের একদম নিরাময়</li>
+<li>৭ দিন সেবনে গ্যাস্ট্রিক প্রবলেমের সমাধান</li>
+<li>৭ দিন সেবনে বুক জ্বালাপোড়া সমাধান</li>
+<li>৭ দিন সেবনে মুখের টক স্বাদ নিরাময়</li>
+<li>৭ দিন সেবনে পেট ফাঁপা একদম সমাধান</li>
+<li>৭ দিন মুখে অরুচি ভাব সমাধান</li>
+<li>৭ দিন সেবনে সুগার ডায়াবেটিসের সমাধান</li>
+<li>৭ দিন সেবনে অতিরিক্ত চর্বি এবং রক্তচাপের সমাধান</li>
+<li>৭ দিন সেবনে পেট পরিষ্কার এবং কৃমির সমাধান</li>
+<li>৭ দিন সেবনে শারীরিক শক্তি এবং যৌন শক্তি বৃদ্ধি</li>
+</ul>
+
+<h3>স্ক্র্যাচ কার্ড ঘষে সর্বোচ্চ ডিসকাউন্ট নিন ⬇️</h3>
+
+<div id="scratch-container">
+<div id="scratch-bottom"></div>
+<canvas id="scratch-canvas" width="320" height="160"></canvas>
 </div>
 
-<!-- BENEFIT SECTION -->
-<div class="benefit-title">✔পণ্যের মূল উপকারিতা</div>
-<div class="benefits">
-<div class="benefit-box" style="background:#ff6f61;">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4upoXPI_etPuS2sL0zOwHBgzrgv2ywPwhX4DSioFWoVvP5-hCxK5jdCYAW6msQAIsdyP7UvZu6CRXUUadqdwh5o_sEEdxc8nMhZr4MrK7hUJzGcKo1TRgh2uI_Us-S8kCQ3XeRsMNWB8p4P8naOq_roF88MXPLEVIA85Yl_Mq45boryGBXNKC3Mun2o4/s830/WhatsApp%20Image%202026-02-22%20at%2011.06.45.jpeg">
-<h3>✔গ্যাস ও অ্যাসিডিটি কমাতে সহায়ক</h3>
-<p>অতিরিক্ত গ্যাস, বুক জ্বালা ও টক ঢেকুর থেকে দ্রুত আরাম দিতে সহায়তা করে।</p>
-<a href="#order" class="benefit-btn">অর্ডার করতে চাই 👈</a>
-</div>
-<div class="benefit-box" style="background:#6a5acd;">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8l2dzYc97NCDFjwTqaDhmTaOTeMabFlI7_5MTYNO96ataPt-I34PyTPECM26o81K4m2_NY1KpB7veHecayDS0PVrN6gz78mfHf3ULR6UU0vW1pug8ZRBcCSqs7GHlDK9mUopeBbXic6uKoHCtl880bXiMH8q8OKQLIx_Z8SvDTyCn5tWLOi5H0kaUFDc/s1200/WhatsApp%20Image%202026-02-22%20at%2011.06.45%20(1).jpeg">
-<h3>✔কোষ্ঠকাঠিন্য এবং পেট ফাঁপা কার্যকর</h3>
-<p>কোষ্ঠকাঠিন্যের জন্য ১০০% কার্যকারী, এবং পেট ফাঁপা সমস্যা নিমিষে দূর করেে।</p>
-<a href="#order" class="benefit-btn">অর্ডার করতে চাই 👈</a>
-</div>
-<div class="benefit-box" style="background:#20b2aa;">
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhakNVJvmf31DksXVLOs37QwnvLk8vdCxMAcDbda0JM2XjTO2CoR_tJJPGtMVTBUSdRuna5qGKedIjAeUWXOHvxoaBX6bDv81NuUxL9lgT5bssO81oRsxwGSSTsgalZYLFvkWlyPLcgCfmppc1CeglIlCrfwXd-Au3mPXazMewWu8740LdNTW_mGWBwvbI/s686/WhatsApp%20Image%202026-02-22%20at%2011.06.46.jpeg">
-<h3>✔হজমশক্তি উন্নত করে</h3>
-<p>নিয়মিত সেবনে হজম প্রক্রিয়া স্বাভাবিক রাখতে সাহায্য করে।</p>
-<a href="#order" class="benefit-btn">অর্ডার করতে চাই 👈</a>
-</div>
-</div>
+<div id="result-message"></div>
+<button class="order-btn" id="orderBtn" onclick="showBilling()">অর্ডার করতে চাই</button>
 
-<!-- REVIEW -->
-<div class="review-section">
-<h2>আমাদের কাস্টমারের রিভিউ</h2>
-<div class="review-slider">
-<div class="review active"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtcmoqe_cd25GhwdBbAIovcVmJdfT-Ab6QMkuOEJYGFdWRibZhAVFb_1CEy2D9lT3uJcoSV6jHyq8ShcjY9_PsikEjKfMF51pJWas6vuUhEWdwIwibWkycKqyufD4PssgYS4QBoX_xBKnq9egE9MwiXthFlS4c2XvNEXas89jPrrgNQzMPKKnrCjZfTnE/s1600/WhatsApp%20Image%202026-02-22%20at%2011.43.18.jpeg"></div>
-<div class="review"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfceI8ecsqh4bybbt1eWd_O4rcTyPxLN2gB_FI_SB4bfPtK7soyAXD9SB53B2JbFr_4EO1I835x0L29kF7n2vGV17L5P4-2HPdlQsEtdlqlgtBaYDT2Z0Ms9R3dmgOrH2C8IZJuRR-GaNpGH109pMxNCl8kO-7fBpAN_YEtUcMoKq66vSl5B9V6cEFOdY/s1599/WhatsApp%20Image%202026-02-22%20at%2011.06.50%20(1).jpeg"></div>
-<div class="review"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj22Y42mg1NE3zlaZLMmmti53lfBDLriWs2h5mkwQkrMEQ5Xt8ujr1xHO17Xo5XrPy1m8AMBpXxzPG4pMuSwe-F4TrEaxtHzY3Q6I8av5LC4RU2XmNV68D_tp5eWb8t-O9O2GkXMhdyPY0KvfL3e2pLB_yUEYEWugP6srldcZkTu9aOoQS10vpwHBUkESI/s1600/WhatsApp%20Image%202026-02-22%20at%2011.43.18%20(1).jpeg"></div>
-<div class="review"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx_G55aKH9b1aL5j9JWMKwVSWc8AdvGg1nmYlEpaZKLcvR-UPlUXYcQSrmdp-91YDn_BPfm6Mxp5dltRSMvGyBrYwvpFXNX6e0duT2b4_d5lnzirvWpyTZmQDxnc_Fz6Wt3DWt78KAc1K_rH3WBS7oqXxsvHT5Xf54soPoGY188sjw3GhGtWstQ7ZkuA8/s1599/WhatsApp%20Image%202026-02-22%20at%2011.06.51.jpeg"></div>
-<div class="review"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMygauxveZxwhM4W_w1fNt4HsKGP2Bx8pCNynA9_4Ak6PZ67SXFzwD9mxEpXdG_9xhBh3defZUeaSfbaHrAb4LL79Sk79waDSQ3pIZApMdQWHjMlrpqWl37RSVM0nFkVpQWTphaJGjCUDJVzW8w7XOmvhKcWXTIULHtd5_3cVnwsyyVHgZY7HUnZ51Hp4/s1599/WhatsApp%20Image%202026-02-22%20at%2011.06.50.jpeg"></div>
-</div>
-</div>
+<div id="billing">
+<h3>ক্যাশ অন ডেলিভারি</h3>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwjoi8RBP65poQRwkTz9IVyQSjAZ5gCvTXYycafCryfXIJ06e2qebmmcGwbn005CyuiliwExeZ08GRKv2BxmDnS1UQzCDNi8aT7Pq1-fmxGZVECjmewLuWjqLcno6MY8W-9GPrsjDzxNw-YVdoHZw0j2gKGINDlvhTLOLLnRewxtnOLnS53Yl3oym2KrM/s1599/WhatsApp%20Image%202026-02-26%20at%2002.38.05.jpeg" width="120" id="cod-img">
+<p style="background:red;color:black;border:2px solid green;">
+নিচে আপনার অর্ডারটি ডিসকাউন্টসহ কনফার্ম করুন
+</p>
 
-<!-- ORDER FORM -->
-<div id="order" class="form-section">
-<h2>499TK✔অর্ডার করতে ফর্ম পূরণ করুন</h2>
-<form id="orderForm" action="https://script.google.com/macros/s/AKfycbwMdwGLgParBPf4povcN7ujQct56FFCFqn6Jux44iaA4Ee_8GWEFyqd941madiWPe-1lA/exec" method="POST">
-<input type="text" name="name" placeholder="আপনার নাম লিখুন✔" required>
-<input type="text" name="phone" placeholder="মোবাইল নাম্বার লিখুন✔" required>
-<textarea name="address" placeholder="সম্পূর্ণ ঠিকানা লিখুন✔" required></textarea>
-<button type="submit" class="submit-btn">✔কনফার্ম অর্ডার✔</button>
-</form>
-</div>
+<div class="billing-box">
+<p>Discount: <span id="final-discount"></span>%</p>
+<p>Price After Discount: <span id="final-price"></span> tk</p>
 
-<!-- SUCCESS POPUP TEMPLATE -->
-<div class="success-template" id="successTemplate">
-<div class="popup">
-<h1>✅</h1>
-<h2>আপনার অর্ডারটি সফলভাবে সাবমিট হয়েছে!!!</h2>
-<p>আমাদের প্রতিনিধি আপনার সাথে যোগাযোগ করবে ইনশাল্লাহ।</p>
-<hr style="margin:20px 0;">
-<p>✅ আপনার দেওয়া তথ্য ✅</p>
-<p>নাম: <span id="custName"></span></p>
-<p>মোবাইল: <span id="custPhone"></span></p>
-<p>ঠিকানা: <span id="custAddress"></span></p>
-<a href="#" class="back-btn" id="backBtn">🔙 ফিরে যান</a>
-</div>
-</div>
+<p>কয়টি নিতে চান নির্বাচন করুন✔:</p>
+<button class="qty-btn" onclick="changeQty(-1)">-</button>
+<span id="qty">1</span>
+<button class="qty-btn" onclick="changeQty(1)">+</button>
 
-<!-- BSTI CERTIFICATE SECTION -->
-<div class="bsti-section">
-<h3>🟩 আমাদের পণ্যটি BSTI থেকে অনুমোদিত ১০০% হালাল এবং নিরাপদ 🟩</h3>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgzIlx92Rro7xaK5WUy9qPvK-FdzLIRUUxUAItz3fLz8BLdVXAG6iiqejkdfLuJ4MFyK3IbTomKHvmYUFyaGlLhdzuHOWJpQBFgPPWgfQYdQ4B-y0XRoJUCv8e0HHkFHHlezgHuNQ-Yd-3CcGKoNZlgWrhxFBioK6FFPjJz7lN54xQtKgNSuXuiq8oB5o/s1599/WhatsApp%20Image%202026-02-22%20at%2011.06.49.jpeg">
-</div>
+<p>মোট দাম: <span id="total-price"></span> tk</p>
 
-<div class="footer">
-<p>© 2026 All Rights Reserved</p>
-<p>Design By <a href="https://greenline-it.pages.dev/">GreenLine It</a></p>
+<input type="text" id="discountField" readonly>
+<input type="text" id="priceField" readonly>
+<input type="text" id="name" placeholder="* ✔নাম লিখুন">
+<input type="text" id="phone" placeholder="* ✔নাম্বার লিখুন">
+<input type="text" id="address" placeholder="* ✔ঠিকানা লিখুন">
+
+<button class="submit-btn" id="submitBtn" onclick="submitOrder()">Submit Order</button>
+</div>
 </div>
 
 <script>
-// HERO IMAGE SLIDER WITH FIRST IMAGE 3 SEC, REST 2 SEC
-let slides=document.querySelectorAll('.hero-slider img');
-let current=0;
-let firstDisplay=true;
-function slideImages(){
-slides.forEach(s=>s.style.opacity=0);
-slides[current].style.opacity=1;
-let timeout=firstDisplay? 3000 : 2000; // first 3 sec, rest 2 sec
-firstDisplay=false;
-current=(current+1)%slides.length;
-setTimeout(slideImages,timeout);
+let originalPrice=900;
+let qty=1;
+
+const STORAGE_KEY="methi_discount_data";
+const now=Date.now();
+let savedData=JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+let discount, discountedPrice;
+let isReturningUser=false;
+
+if(savedData && (now - savedData.time < 24*60*60*1000)){
+discount=savedData.discount;
+discountedPrice=savedData.price;
+isReturningUser=true;
+showWatermark();
+}else{
+discount=Math.floor(Math.random()*31)+20;
+discountedPrice=Math.round(originalPrice-(originalPrice*discount/100));
+localStorage.setItem(STORAGE_KEY,JSON.stringify({
+discount:discount,
+price:discountedPrice,
+time:now
+}));
 }
-slideImages();
 
-// REVIEW SLIDER
-let reviews=document.querySelectorAll('.review');
-let index=0;
-setInterval(()=>{
-reviews[index].classList.remove('active');
-index=(index+1)%reviews.length;
-reviews[index].classList.add('active');
-},2000);
+function showWatermark(){
+let wm=document.createElement("div");
+wm.id="watermark";
+wm.innerHTML="Discount card already Used ❌<br>Try After 24 hours ❌";
+document.getElementById("scratch-container").appendChild(wm);
+}
 
-// FORM SUBMIT WITH POPUP TEMPLATE
-const form=document.getElementById("orderForm");
-const template=document.getElementById("successTemplate");
-const custName=document.getElementById("custName");
-const custPhone=document.getElementById("custPhone");
-const custAddress=document.getElementById("custAddress");
-const backBtn=document.getElementById("backBtn");
+document.getElementById("scratch-bottom").innerHTML=
+"আপনি পেয়েছেন "+discount+"% ডিসকাউন্ট";
 
-form.addEventListener("submit", function(e){
-e.preventDefault();
-let formData=new FormData(form);
+document.getElementById("final-discount").innerText=discount;
+document.getElementById("final-price").innerText=discountedPrice;
+document.getElementById("total-price").innerText=discountedPrice;
+document.getElementById("discountField").value=discount+"%";
+document.getElementById("priceField").value=discountedPrice+" tk";
 
-// populate popup template
-custName.textContent=formData.get('name');
-custPhone.textContent=formData.get('phone');
-custAddress.textContent=formData.get('address');
+let canvas=document.getElementById("scratch-canvas");
+let ctx=canvas.getContext("2d");
 
-// show popup
-template.style.display="flex";
+let gradient=ctx.createLinearGradient(0,0,320,0);
+gradient.addColorStop(0,"red");
+gradient.addColorStop(0.17,"orange");
+gradient.addColorStop(0.34,"yellow");
+gradient.addColorStop(0.51,"green");
+gradient.addColorStop(0.68,"blue");
+gradient.addColorStop(0.85,"indigo");
+gradient.addColorStop(1,"violet");
 
-// submit to Google Sheet
-fetch(form.action,{method:"POST",body:formData})
-.then(()=>{
-// success logged, template already shown
+ctx.fillStyle=gradient;
+ctx.fillRect(0,0,320,160);
+
+ctx.fillStyle="black";
+ctx.font="bold 18px Arial";
+ctx.textAlign="center";
+ctx.fillText("এখানে ঘোষণ 👈",160,85);
+
+if(!isReturningUser){
+ctx.globalCompositeOperation="destination-out";
+let scratching=false;
+function scratch(e){
+let rect=canvas.getBoundingClientRect();
+let x=(e.touches?e.touches[0].clientX:e.clientX)-rect.left;
+let y=(e.touches?e.touches[0].clientY:e.clientY)-rect.top;
+ctx.beginPath();
+ctx.arc(x,y,20,0,Math.PI*2);
+ctx.fill();
+}
+canvas.addEventListener("mousedown",(e)=>{scratching=true;scratch(e)});
+canvas.addEventListener("mousemove",(e)=>{if(scratching)scratch(e)});
+canvas.addEventListener("mouseup",()=>{scratching=false;finishScratch()});
+canvas.addEventListener("touchstart",(e)=>{scratching=true;scratch(e)});
+canvas.addEventListener("touchmove",(e)=>{if(scratching)scratch(e)});
+canvas.addEventListener("touchend",()=>{scratching=false;finishScratch()});
+
+function finishScratch(){
+document.getElementById("result-message").innerHTML=
+"🎉 অভিনন্দন! আপনি "+discount+"% ডিসকাউন্ট পাওয়ার পরে Methi Mixd powder এর বর্তমান দাম আপনার জন্য "+discountedPrice+" টাকা";
+document.getElementById("orderBtn").style.display="inline-block";
+showBilling();
+}
+}else{
+document.getElementById("result-message").innerHTML=
+"✅ আপনি আগেই "+discount+"% ডিসকাউন্ট পেয়েছেন। এই ডিসকাউন্টেই অর্ডার করতে পারবেন।";
+document.getElementById("orderBtn").style.display="inline-block";
+showBilling();
+}
+
+document.getElementById("cod-img").addEventListener("click",function(){
+this.classList.toggle("fullscreen");
 });
 
-// back button hides popup
-backBtn.addEventListener("click", function(e){
-e.preventDefault();
-template.style.display="none";
-form.reset();
+function showBilling(){
+document.getElementById("billing").style.display="block";
+}
+
+function changeQty(val){
+qty+=val;
+if(qty<1) qty=1;
+document.getElementById("qty").innerText=qty;
+let total=discountedPrice*qty;
+document.getElementById("total-price").innerText=total;
+document.getElementById("priceField").value=total+" tk";
+}
+
+function submitOrder(){
+let name=document.getElementById("name");
+let phone=document.getElementById("phone");
+let address=document.getElementById("address");
+
+if(!name.value || !phone.value || !address.value){
+alert("⚠️ সকল ঘর পূরণ করতে হবে");
+if(!name.value) name.style.border="2px solid red";
+if(!phone.value) phone.style.border="2px solid red";
+if(!address.value) address.style.border="2px solid red";
+return;
+}
+
+let btn=document.getElementById("submitBtn");
+btn.classList.add("shrink");
+
+setTimeout(()=>{
+alert("✅ আপনার অর্ডার কনফার্ম হয়েছে!");
+
+let data={
+discount:document.getElementById("discountField").value,
+price:document.getElementById("priceField").value,
+name:name.value,
+phone:phone.value,
+address:address.value
+};
+
+fetch("https://script.google.com/macros/s/AKfycbwK5jQxGjkVWjl_jrvyPtQpzT1LYBgsNMto9evS0-T7I_BsuFGNCWOoHugplTkYxsDS/exec",{
+method:"POST",
+body:JSON.stringify(data)
 });
-});
+
+btn.classList.remove("shrink");
+},1000);
+}
 </script>
+<style>
+#notification-box{
+position:fixed;
+top:20px;
+left:-400px;
+background:#111;
+color:#fff;
+padding:12px 18px;
+border-radius:8px;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+font-size:15px;
+z-index:9999;
+transition:0.6s;
+min-width:280px;
+}
+#notification-box span{
+color:#00ff4c;
+font-weight:bold;
+}
 
+#live-review-tab{
+position:fixed;
+right:0;
+top:50%;
+transform:translateY(-50%);
+background:red;
+color:#fff;
+padding:12px 8px;
+writing-mode:vertical-rl;
+text-orientation:mixed;
+font-weight:bold;
+cursor:pointer;
+border-radius:8px 0 0 8px;
+z-index:9999;
+box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+
+#review-popup{
+position:fixed;
+right:-400px;
+top:50%;
+transform:translateY(-50%);
+width:320px;
+height:480px;
+background:#fff;
+border-radius:20px;
+box-shadow:0 0 25px rgba(0,0,0,0.5);
+z-index:99999;
+display:flex;
+flex-direction:column;
+overflow:hidden;
+transition:0.5s;
+}
+
+#review-header{
+background:#111;
+color:#fff;
+padding:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:14px;
+}
+
+#review-messages{
+flex:1;
+padding:10px;
+overflow-y:auto;
+font-size:13px;
+background:#f5f5f5;
+}
+
+.review-item{
+margin-bottom:10px;
+background:#fff;
+padding:8px;
+border-radius:8px;
+box-shadow:0 0 5px rgba(0,0,0,0.1);
+}
+
+.profile{
+display:flex;
+align-items:center;
+margin-bottom:5px;
+}
+
+.avatar{
+width:30px;
+height:30px;
+border-radius:50%;
+margin-right:6px;
+position:relative;
+}
+
+.online-dot{
+position:absolute;
+bottom:0;
+right:0;
+width:8px;
+height:8px;
+background:#00ff00;
+border-radius:50%;
+border:1px solid #fff;
+}
+
+.review-name{
+font-weight:bold;
+font-size:12px;
+}
+
+#review-input{
+padding:8px;
+border-top:1px solid #ddd;
+display:flex;
+}
+#review-input input{
+flex:1;
+padding:5px;
+font-size:12px;
+}
+#review-input button{
+padding:5px 8px;
+background:red;
+color:#fff;
+border:none;
+cursor:pointer;
+font-size:12px;
+}
+</style>
+
+<div id="notification-box"></div>
+<div id="live-review-tab" onclick="openReview()">Live Reviews</div>
+
+<div id="review-popup">
+<div id="review-header">
+<span>Live Customer Reviews</span>
+<span style="cursor:pointer;" onclick="closeReview()">✖</span>
+</div>
+<div id="review-messages"></div>
+<div id="review-input">
+<input type="text" id="userReview" placeholder="আপনার রিভিউ লিখুন...">
+<button onclick="addUserReview()">Send</button>
+</div>
+</div>
+
+<script>
+const names = ["আমিনুল ইসলাম","তানিয়া আক্তার","রাকিব হাসান","সাবিনা ইয়াসমিন","মোস্তাফিজুর রহমান",
+"নাসরিন আক্তার","ইমরান হোসেন","সুমাইয়া ইসলাম","শাহাদাত হোসেন","মাহি আক্তার",
+"সোহেল রানা","জান্নাতুল ফেরদৌস","রিয়াজ উদ্দিন","মৌসুমী আক্তার","ফারুক হোসেন",
+"রুমানা আক্তার","হাবিবুর রহমান","মিম আক্তার","শামীম আহমেদ","সাব্বির হাসান",
+"রোকেয়া বেগম","আলমগীর হোসেন","নুসরাত জাহান","আরিফুল ইসলাম","সাদিয়া আফরিন",
+"জুবায়ের রহমান","লাবনী আক্তার","রিফাত হাসান","মারুফ হোসেন","তৃষা ইসলাম"];
+
+const discounts = ["৫%","৭%","১০%","১২%","১৫%"];
+
+function showNotification(){
+let name = names[Math.floor(Math.random()*names.length)];
+let discount = discounts[Math.floor(Math.random()*discounts.length)];
+let box = document.getElementById("notification-box");
+box.innerHTML = `<span>${name}</span> ${discount} ডিসকাউন্টে 🎉 অর্ডার করেছে`;
+box.style.left="20px";
+setTimeout(()=>{box.style.left="-400px";},2500);
+}
+setInterval(showNotification,3000);
+
+const reviewMessages = [
+"৭ দিনেই গ্যাস্ট্রিক অনেক কমেছে!",
+"পেট পরিষ্কার হচ্ছে প্রতিদিন 👍",
+"বুক জ্বালাপোড়া এখন নেই।",
+"ডায়াবেটিস কন্ট্রোলে সাহায্য করছে।",
+"খুব ভালো কাজ করছে আলহামদুলিল্লাহ।",
+"শরীরের শক্তি বেড়েছে।",
+"কোষ্ঠকাঠিন্য পুরো ঠিক।",
+"দাম অনুযায়ী দারুণ প্রোডাক্ট।",
+
+/* ===== নতুন ১৫টি ইউনিক রিভিউ ===== */
+"৩ দিনের মধ্যেই পেট ফাঁপা কমে গেছে!",
+"মুখের টক স্বাদ পুরোপুরি চলে গেছে।",
+"খাওয়ার রুচি অনেক বেড়েছে এখন।",
+"প্রতিদিন সকালে পেট পরিষ্কার হচ্ছে।",
+"রক্তচাপ আগের চেয়ে নিয়ন্ত্রণে।",
+"ডায়াবেটিস রিপোর্টেও উন্নতি দেখছি।",
+"৭ দিন পরেই বুকের জ্বালাপোড়া বন্ধ।",
+"গ্যাসের ব্যথা এখন একদম নেই।",
+"শরীরে আগের চেয়ে এনার্জি বেশি লাগছে।",
+"চর্বি কমাতে সাহায্য করছে।",
+"ঘুমও আগের চেয়ে ভালো হচ্ছে।",
+"কৃমির সমস্যা অনেক কমেছে।",
+"পেটের ভারভাব এখন আর নেই।",
+"পারিবারিকভাবে সবাই ব্যবহার করছি।",
+"এক কথায় অসাধারণ হারবাল প্রোডাক্ট!"
+];
+
+function randomAvatar(){
+return "https://i.pravatar.cc/150?img=" + Math.floor(Math.random()*70);
+}
+
+function addReview(){
+let container = document.getElementById("review-messages");
+let name = names[Math.floor(Math.random()*names.length)];
+let message = reviewMessages[Math.floor(Math.random()*reviewMessages.length)];
+
+let div = document.createElement("div");
+div.className="review-item";
+div.innerHTML=`
+<div class="profile">
+<div style="position:relative;">
+<img src="${randomAvatar()}" class="avatar">
+<div class="online-dot"></div>
+</div>
+<div class="review-name">${name}</div>
+</div>
+<div>${message}</div>
+`;
+container.appendChild(div);
+container.scrollTop = container.scrollHeight;
+}
+
+setInterval(addReview,2500);
+
+function openReview(){
+document.getElementById("review-popup").style.right="20px";
+}
+function closeReview(){
+document.getElementById("review-popup").style.right="-400px";
+}
+
+function addUserReview(){
+let input=document.getElementById("userReview");
+if(input.value.trim()!=""){
+let container=document.getElementById("review-messages");
+let div=document.createElement("div");
+div.className="review-item";
+div.innerHTML="<b>আপনি:</b> "+input.value;
+container.appendChild(div);
+container.scrollTop=container.scrollHeight;
+input.value="";
+}
+}
+</script>
 </body>
 </html>
-
-

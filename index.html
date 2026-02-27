@@ -6,6 +6,8 @@
 <title>Methi Mixd Powder</title>
 
 <style>
+*{box-sizing:border-box;}
+
 body{
 margin:0;
 background:#ffffff;
@@ -13,7 +15,62 @@ font-family:Arial, sans-serif;
 text-align:center;
 overflow-x:hidden;
 }
-.product-img{width:150px;margin-top:20px;}
+
+/* 🔥 1:1 IMAGE SECTION */
+.image-container{
+width:100%;
+aspect-ratio:1/1;
+max-height:400px;
+overflow:hidden;
+}
+
+.top-image{
+width:100%;
+height:100%;
+object-fit:contain;
+display:block;
+border:3px solid red;
+background:#fff;
+}
+/* 🔥 END IMAGE */
+
+/* 🔥 RUNNING HEADLINE COMMON */
+.marquee{
+width:100%;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.marquee span{
+display:inline-block;
+padding-left:100%;
+animation:scroll-left 18s linear infinite;
+font-weight:bold;
+font-size:16px;
+}
+
+/* ডান থেকে বামে চলবে */
+@keyframes scroll-left{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+/* প্রথম হেডলাইন */
+.headline1{
+background:yellow;
+border-top:2px solid black;
+border-bottom:2px solid black;
+}
+
+/* দ্বিতীয় হেডলাইন */
+.headline2{
+background:red;
+color:white;
+border-top:2px solid green;
+border-bottom:2px solid green;
+}
+
+/* ভিডিও আগের মতো */
 .video-wrapper{
 width:100%;
 border:2px solid red;
@@ -26,6 +83,7 @@ overflow:hidden;
 .video-wrapper iframe{
 position:absolute;top:0;left:0;width:100%;height:100%;border:none;
 }
+
 .price{font-size:22px;font-weight:bold;margin:10px 0;}
 .benefit-title{
 display:inline-block;background:yellow;padding:8px 15px;
@@ -35,6 +93,7 @@ border:1px solid black;font-weight:bold;color:black;
 .benefits li{
 background:white;border:1px solid black;margin:6px 0;padding:6px;color:black;
 }
+
 #scratch-container{
 margin:auto;width:320px;height:160px;border:2px solid red;
 position:relative;overflow:hidden;
@@ -86,7 +145,24 @@ text-align:center;
 
 <body>
 
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitqVTwrsAsNL0SKY6TS9udESxXAsnIVF-kMzhmKhcrg0W2fRdVWMexxIvnrMUl8V5cGU77N_sCcfTC65vULGvWRzBMRmn84g-uHYaFJY22lv0arUxAc2zKYTAhb_8_sm_2TBJPFeg8w8CAdZgWYBvhtX_cx6ELb-iJOV7IoP5eeaVwl_SBUserNGQf44k/s549/WhatsApp_Image_2026-02-26_at_17.16.27-removebg-preview.png">
+<!-- 🔥 1:1 IMAGE -->
+<div class="image-container">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbONT9hdsAB4h-ztFE1oUNQo9D8j1zIip5Ad316qmppcIJDYmwdKOuF1DT85f5ptL6mnlWfDjdG3bJVqsL6ZO2Ul1znLI_vScuBNyV9zLuaZYoyg2BYT9qvar4VZxplQc4ENq3vpsBZVtNWLMZE7zfxoi8pLXdL36-ixvX2zuKrpEsnCo70jxlWI5p7aM/s1599/WhatsApp%20Image%202026-02-26%20at%2016.07.54.jpeg" class="top-image">
+</div>
+
+<!-- 🔥 HEADLINE 1 -->
+<div class="marquee headline1">
+<span>
+আসসালামু আলাইকুম ♥️ সবাইকে মাহে রমজানের শুভেচ্ছা 🌙 সিয়াম সাধনের জন্য আমাদের বেশিরভাগেরই গ্যাস্ট্রিকের সমস্যা হয়, মেথি মিক্সড পাউডার সকল প্রকার গ্যাস্ট্রিকের সমস্যা নিমেষে দূর করে ♥️
+</span>
+</div>
+
+<!-- 🔥 HEADLINE 2 -->
+<div class="marquee headline2">
+<span>
+পবিত্র রমজান মাস উপলক্ষে🌙 আমরা মেথি মিক্সড পাউডারে একটি লাকি স্ক্রাচ কার্ড দিচ্ছি🎉 সেখানে আপনি সর্বোচ্চ ৫০% ডিসকাউন্টে 🎉 মেথি মিক্সড অর্ডার করতে পারবেন ♥️
+</span>
+</div>
 
 <div class="video-wrapper">
 <iframe src="https://www.youtube.com/embed/pJrfhCo_dgw" allowfullscreen></iframe>
@@ -101,7 +177,7 @@ Methi Mixd powder সেবনের উপকারিতা 👇
 <ul class="benefits">
 <li>৭ দিন সেবনে কোষ্ঠকাঠিন্যের একদম নিরাময়</li>
 <li>৭ দিন সেবনে গ্যাস্ট্রিক প্রবলেমের সমাধান</li>
-<li>৭ দিন সেবনে বুক জ্বালাপোড়া সমাধান</li>
+<li>৭ দিন সেবনে বুক জ্বালাপোড়াসমাধান</li>
 <li>৭ দিন সেবনে মুখের টক স্বাদ নিরাময়</li>
 <li>৭ দিন সেবনে পেট ফাঁপা একদম সমাধান</li>
 <li>৭ দিন মুখে অরুচি ভাব সমাধান</li>
@@ -111,7 +187,6 @@ Methi Mixd powder সেবনের উপকারিতা 👇
 <li>৭ দিন সেবনে শারীরিক শক্তি এবং যৌন শক্তি বৃদ্ধি</li>
 </ul>
 
-<h3>স্ক্র্যাচ কার্ড ঘষে সর্বোচ্চ ডিসকাউন্ট নিন ⬇️</h3>
 
 <div id="scratch-container">
 <div id="scratch-bottom"></div>
@@ -547,6 +622,9 @@ Design by 01785369906
 </footer>
 </body>
 </html>
+
+
+
 
 
 

@@ -266,7 +266,138 @@ Methi Mixd powder সেবনের উপকারিতা 👇
 
 <div id="result-message"></div>
 <button class="order-btn" id="orderBtn" onclick="showBilling()">অর্ডার করতে চাই</button>
+<!-- 🔥 ORDER BUTTON -->
+<button class="order-btn" id="orderBtn" onclick="showBilling()">অর্ডার করতে চাই</button>
 
+<!-- 🔥 NEW INGREDIENT SECTION START -->
+<style>
+
+/* 🔥 16:9 IMAGE */
+.ingredient-image-container{
+width:100%;
+aspect-ratio:16/9;
+overflow:hidden;
+border-top:2px solid red;
+margin-top:10px;
+}
+
+.ingredient-image-container img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+/* 🔥 TITLE */
+.ingredient-title{
+display:block;
+width:100%;
+background:yellow;
+padding:14px 0;
+border-top:1px solid black;
+border-bottom:1px solid black;
+font-weight:bold;
+font-size:18px;
+}
+
+.ingredients{
+text-align:left;
+padding:10px;
+margin-top:5px;
+}
+
+.ingredients li{
+background:white;
+border:1px solid black;
+margin:4px 0;
+padding:8px;
+color:black;
+position:relative;
+overflow:hidden;
+}
+
+.circle{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) scale(0);
+width:95%;
+height:80%;
+border-radius:50%;
+border:3px solid red;
+pointer-events:none;
+opacity:0.9;
+}
+
+.animate-circle{
+animation:drawCircle 0.8s ease forwards;
+}
+
+@keyframes drawCircle{
+0%{transform:translate(-50%,-50%) scale(0);}
+60%{transform:translate(-50%,-50%) scale(1.1);}
+100%{transform:translate(-50%,-50%) scale(1);}
+}
+
+</style>
+
+<!-- 🔥 IMAGE PLACE (16:9) -->
+<div class="ingredient-image-container">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi87LyqCIeBE0oRu3pXzjyCg4tPuOJBTZ5G7I-QPk7HKCA50_nk23rXofCGgUZKqtE2DUWBQSxedZLnNm31fXzKWYqNnbMntUBTORybbO8d69iIm2vKjWKh8A4zcN6AgH3DCG5u85Zs48rf5ZsDRzrdMQXOvKB2osgRDBVvLF0v6iVMuJcSycwkg6tllGQ/s1536/WhatsApp%20Image%202026-02-27%20at%2002.31.57.jpeg" alt="Methi Mixd Ingredients Image">
+</div>
+
+<div class="ingredient-title">
+Methi Mixd powder এর উপাদান👇
+</div>
+
+<ul class="ingredients" id="ingredientList">
+<li>মেথি বেলচূর্ণ – হজম শক্তি বাড়ায় ও কোষ্ঠকাঠিন্য কমাতে সহায়ক।</li>
+<li>আমলকি – ভিটামিন সি সমৃদ্ধ, রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে।</li>
+<li>হরিতকি – পেট পরিষ্কার রাখে ও গ্যাসের সমস্যা কমায়।</li>
+<li>বহেরা – কাশি কমাতে ও হজম উন্নত করতে সাহায্য করে।</li>
+<li>কালোজিরা – শরীরের রোগ প্রতিরোধ ক্ষমতা বাড়ায় ও প্রদাহ কমায়।</li>
+<li>তুলসী – সর্দি-কাশি উপশমে ও শ্বাসতন্ত্র ভালো রাখতে সহায়ক।</li>
+<li>অর্জুন – হৃদযন্ত্রের স্বাস্থ্যের জন্য উপকারী।</li>
+<li>থানকুনি – স্মৃতিশক্তি ও হজম শক্তি বাড়াতে সাহায্য করে।</li>
+<li>মৌরী – বদহজম ও পেট ফাঁপা কমায়।</li>
+<li>জিরা – হজম প্রক্রিয়া উন্নত করে ও ক্ষুধা বাড়ায়।</li>
+<li>পুদিনা – গ্যাস ও বমিভাব কমাতে সহায়ক।</li>
+<li>সোনাপাতা – কোষ্ঠকাঠিন্য দূর করতে কার্যকর।</li>
+<li>ধনিয়া – হজম শক্তি বাড়ায় ও শরীর ঠান্ডা রাখে।</li>
+<li>আদা – হজমে সাহায্য করে ও বমিভাব কমায়।</li>
+</ul>
+
+<script>
+const colors=["red","green","blue","orange","purple","brown","teal","magenta","#ff0077","#0099ff","#00aa55","#ff8800","#9900ff","#444"];
+
+let items=document.querySelectorAll("#ingredientList li");
+let index=0;
+
+function animateNext(){
+items.forEach(li=>{
+let old=li.querySelector(".circle");
+if(old) old.remove();
+});
+
+let circle=document.createElement("div");
+circle.className="circle animate-circle";
+circle.style.borderColor=colors[index%colors.length];
+
+items[index].appendChild(circle);
+
+index++;
+if(index>=items.length) index=0;
+}
+
+setInterval(animateNext,1000);
+
+/* 🔥 SMOOTH SCROLL TO BILLING */
+function showBilling(){
+document.getElementById("billing").style.display="block";
+document.getElementById("billing").scrollIntoView({behavior:"smooth"});
+}
+</script>
+<!-- 🔥 NEW INGREDIENT SECTION END -->
 <div id="billing">
 <h3>ক্যাশ অন ডেলিভারি</h3>
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwjoi8RBP65poQRwkTz9IVyQSjAZ5gCvTXYycafCryfXIJ06e2qebmmcGwbn005CyuiliwExeZ08GRKv2BxmDnS1UQzCDNi8aT7Pq1-fmxGZVECjmewLuWjqLcno6MY8W-9GPrsjDzxNw-YVdoHZw0j2gKGINDlvhTLOLLnRewxtnOLnS53Yl3oym2KrM/s1599/WhatsApp%20Image%202026-02-26%20at%2002.38.05.jpeg" width="120" id="cod-img">
@@ -693,6 +824,7 @@ Design by 01785369906
 </footer>
 </body>
 </html>
+
 
 
 

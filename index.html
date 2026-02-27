@@ -16,14 +16,13 @@ text-align:center;
 overflow-x:hidden;
 }
 
-/* 🔥 1:1 IMAGE SECTION */
+/* 🔥 1:1 IMAGE */
 .image-container{
 width:100%;
 aspect-ratio:1/1;
 max-height:400px;
 overflow:hidden;
 }
-
 .top-image{
 width:100%;
 height:100%;
@@ -32,15 +31,13 @@ display:block;
 border:3px solid red;
 background:#fff;
 }
-/* 🔥 END IMAGE */
 
-/* 🔥 RUNNING HEADLINE COMMON */
+/* 🔥 RUNNING HEADLINES */
 .marquee{
 width:100%;
 overflow:hidden;
 white-space:nowrap;
 }
-
 .marquee span{
 display:inline-block;
 padding-left:100%;
@@ -48,21 +45,19 @@ animation:scroll-left 18s linear infinite;
 font-weight:bold;
 font-size:16px;
 }
-
-/* ডান থেকে বামে চলবে */
 @keyframes scroll-left{
 0%{transform:translateX(0);}
 100%{transform:translateX(-100%);}
 }
 
-/* প্রথম হেডলাইন */
+/* Headline 1 */
 .headline1{
 background:yellow;
 border-top:2px solid black;
 border-bottom:2px solid black;
 }
 
-/* দ্বিতীয় হেডলাইন */
+/* Headline 2 */
 .headline2{
 background:red;
 color:white;
@@ -70,11 +65,11 @@ border-top:2px solid green;
 border-bottom:2px solid green;
 }
 
-/* ভিডিও আগের মতো */
+/* 🔥 VIDEO */
 .video-wrapper{
 width:100%;
 border:2px solid red;
-margin-top:10px;
+margin-top:5px;
 position:relative;
 padding-bottom:56.25%;
 height:0;
@@ -84,16 +79,60 @@ overflow:hidden;
 position:absolute;top:0;left:0;width:100%;height:100%;border:none;
 }
 
-.price{font-size:22px;font-weight:bold;margin:10px 0;}
-.benefit-title{
-display:inline-block;background:yellow;padding:8px 15px;
-border:1px solid black;font-weight:bold;color:black;
+/* 🔥 LIVE CUT PRICE */
+.price{
+font-size:28px;
+font-weight:bold;
+margin:15px 0 5px 0;
+color:#000;
+position:relative;
+display:inline-block;
 }
-.benefits{text-align:left;padding:15px;}
-.benefits li{
-background:white;border:1px solid black;margin:6px 0;padding:6px;color:black;
+.price::after{
+content:"";
+position:absolute;
+left:0;
+top:50%;
+width:100%;
+height:3px;
+background:red;
+transform:scaleX(0);
+transform-origin:left;
+animation:cutLine 1s infinite;
+}
+@keyframes cutLine{
+0%{transform:scaleX(0);}
+50%{transform:scaleX(1);}
+100%{transform:scaleX(0);}
 }
 
+/* 🔥 BENEFIT TITLE */
+.benefit-title{
+display:block;
+width:100%;
+background:yellow;
+padding:14px 0;
+border:2px solid red;
+font-weight:bold;
+font-size:18px;
+margin:5px 0 5px 0;
+}
+
+/* Gap Reduced */
+.benefits{
+text-align:left;
+padding:10px;
+margin-top:5px;
+}
+.benefits li{
+background:white;
+border:1px solid black;
+margin:4px 0;
+padding:6px;
+color:black;
+}
+
+/* 🔥 OTHER PART UNCHANGED */
 #scratch-container{
 margin:auto;width:320px;height:160px;border:2px solid red;
 position:relative;overflow:hidden;
@@ -145,7 +184,7 @@ text-align:center;
 
 <body>
 
-<!-- 🔥 1:1 IMAGE -->
+<!-- 🔥 IMAGE -->
 <div class="image-container">
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbONT9hdsAB4h-ztFE1oUNQo9D8j1zIip5Ad316qmppcIJDYmwdKOuF1DT85f5ptL6mnlWfDjdG3bJVqsL6ZO2Ul1znLI_vScuBNyV9zLuaZYoyg2BYT9qvar4VZxplQc4ENq3vpsBZVtNWLMZE7zfxoi8pLXdL36-ixvX2zuKrpEsnCo70jxlWI5p7aM/s1599/WhatsApp%20Image%202026-02-26%20at%2016.07.54.jpeg" class="top-image">
 </div>
@@ -160,16 +199,19 @@ text-align:center;
 <!-- 🔥 HEADLINE 2 -->
 <div class="marquee headline2">
 <span>
-পবিত্র রমজান মাস উপলক্ষে🌙 আমরা মেথি মিক্সড পাউডারে একটি লাকি স্ক্রাচ কার্ড দিচ্ছি🎉 সেখানে আপনি সর্বোচ্চ ৫০% ডিসকাউন্টে 🎉 মেথি মিক্সড অর্ডার করতে পারবেন ♥️
+পবিত্র রমজান মাস উপলক্ষে🌙 আমরা মেথি মিক্সড পাউডারে একটি লাকি স্ক্র্যাচ কার্ড দিচ্ছি🎉 সেখানে আপনি সর্বোচ্চ ৫০% ডিসকাউন্টে 🎉 মেথি মিক্সড অর্ডার করতে পারবেন ♥️
 </span>
 </div>
 
+<!-- 🔥 VIDEO -->
 <div class="video-wrapper">
 <iframe src="https://www.youtube.com/embed/pJrfhCo_dgw" allowfullscreen></iframe>
 </div>
 
+<!-- 🔥 LIVE CUT PRICE -->
 <div class="price">MRP-900tk</div>
 
+<!-- 🔥 BENEFIT TITLE -->
 <div class="benefit-title">
 Methi Mixd powder সেবনের উপকারিতা 👇
 </div>
@@ -177,7 +219,7 @@ Methi Mixd powder সেবনের উপকারিতা 👇
 <ul class="benefits">
 <li>৭ দিন সেবনে কোষ্ঠকাঠিন্যের একদম নিরাময়</li>
 <li>৭ দিন সেবনে গ্যাস্ট্রিক প্রবলেমের সমাধান</li>
-<li>৭ দিন সেবনে বুক জ্বালাপোড়াসমাধান</li>
+<li>৭ দিন সেবনে বুক জ্বালাপোড়া সমাধান</li>
 <li>৭ দিন সেবনে মুখের টক স্বাদ নিরাময়</li>
 <li>৭ দিন সেবনে পেট ফাঁপা একদম সমাধান</li>
 <li>৭ দিন মুখে অরুচি ভাব সমাধান</li>
@@ -186,6 +228,11 @@ Methi Mixd powder সেবনের উপকারিতা 👇
 <li>৭ দিন সেবনে পেট পরিষ্কার এবং কৃমির সমাধান</li>
 <li>৭ দিন সেবনে শারীরিক শক্তি এবং যৌন শক্তি বৃদ্ধি</li>
 </ul>
+
+<!-- আপনার বাকি স্ক্র্যাচ কার্ড + বিলিং + JS কোড আগের মতো এখান থেকে বসবে -->
+
+</body>
+</html>
 
 
 <div id="scratch-container">
@@ -622,6 +669,8 @@ Design by 01785369906
 </footer>
 </body>
 </html>
+
+
 
 
 
